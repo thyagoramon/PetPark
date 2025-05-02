@@ -1,0 +1,102 @@
+@import url(CSS/cabecalho.css);
+@import url(CSS/destaque.css);
+@import url(CSS/servicos.css);
+@import url(CSS/planos.css);
+@import url(CSS/ofertas.css);
+@import url(CSS/parceiros.css);
+@import url(CSS/newsletter.css);
+@import url(CSS/rodape.css);
+
+:root {
+    --font-headings: "Sigmar", sans-serif;
+    --font-body: "Poppins", sans-serif;
+
+    --font-size-h1: 4.5rem;
+    --font-size-h2: 2.635rem;
+    --font-size-h3: 2.438rem;
+    --font-size-h4: 1.938rem;
+    --font-size-h5: 1.563rem;
+    --font-size-l: 1.25rem; /*20px*/
+    --font-size-m: 1rem; /*16px*/
+    --font-size-s: 0.813rem; /*13px*/
+
+    --color-cinzaescuro: #444444;
+    --color-cinzamedio: #b9b9b9;
+    --color-branco: #ffffff;
+    --color-coral: #ee6951;
+    --color-ocre: #c13724;
+    --color-bege1: #fff5eb;
+    --color-bege2: #f5e6d6;
+    --color-verde1: #cbda74;
+    --color-verde2: #a2b72b;
+    --color-verde3: #eff2e1;
+    
+    --shadow: 4px 4px 8px 0 #ee645108;
+
+    --padding-l: 80px;
+    --padding-m: 40px;
+    --padding-s: 20px;
+
+    --padding-obj-s: 8px;
+    --padding-obj-m: 16px;
+    --padding-obj-l: 32px;
+
+    --gap-l: 80px;
+    --gap-m: 40px;
+    --gap-s: 20px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: var(--color-branco);
+    font-family: var(--font-body);
+    color: var(--color-cinzaescuro);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.container {
+    width: 66vw;
+}
+
+@media screen and (max-width:1200px) {
+    .container {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .container {
+        width: 90vw;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-headings);
+}
+h1 {
+    font-size: var(--font-size-h1);
+}
+h2 {
+    font-size: var(--font-size-h2);
+}
+h3 {
+    font-size: var(--font-size-h3);
+}
+h4 {
+    font-size: var(--font-size-h4);
+}
+h5 {
+    font-size: var(--font-size-h5);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}

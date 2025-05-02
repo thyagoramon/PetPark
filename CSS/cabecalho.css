@@ -1,0 +1,141 @@
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding-m) 0;
+    gap: var(--gap-m);
+    width: 100%;
+}
+
+.alinhamento-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap-s);
+}
+
+.label-busca {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-busca {
+    background-color: transparent;
+    border: solid 1px var(--color-cinzaescuro);
+    padding: var(--padding-obj-s) var(--padding-obj-m);
+    border-radius: 32px;
+    width: 100%;
+    background-image: url(../assets/icones/busca.png);
+    background-repeat: no-repeat;
+    background-position: 97%;
+    transition: 0.3s ease;
+    outline: none;
+    &::placeholder {
+        font-family: var(--font-body);
+        font-size: var(--font-size-m);
+        color: var(--color-cinzamedio);
+        transition: 0.3s ease;
+    }
+    &:hover {
+        border: solid 1px var(--color-coral);
+    }
+    &:hover::placeholder {
+        color: var(--color-coral);
+    }
+}
+
+.botao-login {
+    background-color: transparent;
+    border: none;
+    font-size: var(--font-size-l);
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: 0.3s ease;
+    &:hover {
+        color: var(--color-coral);
+    }
+    img {
+        margin-right: 5px;
+    }
+}
+
+.menu-lista {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: inherit;
+    font-size: var(--font-size-l);
+    position: relative;
+    transition: 0.3s ease;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--color-coral);
+        transition: width 0.3s ease;
+    }
+    &:hover {
+        color: var(--color-coral);
+    }
+    &:hover::after, :focus::after {
+        width: 100%;
+    }
+}
+
+.cabecalho-menu {
+    display: none;
+}
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width:1024px) {
+    .alinhamento-cabecalho {
+        flex-wrap: wrap;
+    }
+    .label-busca {
+        order: 3;
+        width: 100%;        
+    }
+}
+
+@media screen and (max-width:700px) {
+    .cabecalho-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /*menu suspenso*/
+    .cabecalho-menu {
+        display: block;
+        transition: 0.3s ease-out;
+    }
+    .navegacao {
+        display: none;
+    }
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        font-size: var(--font-size-l);
+
+        overflow: hidden;
+        max-height: 0;
+        transition: 0.3s ease-out;
+    }
+    .mobile-lista {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: var(--padding-obj-m);
+    }
+}

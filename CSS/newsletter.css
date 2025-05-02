@@ -1,0 +1,164 @@
+.newsletter {
+    background-color: var(--color-bege1);
+    width: 100%;
+    padding: var(--padding-l) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-titulo {
+    color: var(--color-coral);
+    padding-bottom: var(--gap-m);
+}
+
+.newsletter-paragrafo {
+    font-size: var(--font-size-l);
+    padding-bottom: var(--gap-s);
+}
+
+.formulario {
+    display: flex;
+    gap: var(--gap-m);
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-input {
+    background-color: transparent;
+    border: solid 1px var(--color-cinzaescuro);
+    padding: var(--padding-obj-s) var(--padding-obj-m);
+    border-radius: var(--padding-obj-l);
+    transition: 0.3s ease;
+    outline: none;
+}
+
+.formulario-input:hover {
+    border: solid 1px var(--color-coral);
+}
+
+.formulario-input::placeholder {
+    color: var(--color-cinzaescuro);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.formulario-input:hover::placeholder {
+    color: var(--color-coral);
+}
+
+.grupo-opcoes {
+    display: flex;
+    gap: var(--gap-s);
+}
+
+.opcao {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s ease;
+}
+
+.opcao:hover {
+    color: var(--color-coral);
+}
+
+.opcao input {
+    display: none;
+}
+
+.opcao span {
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    background-color: transparent;
+    border: solid 2px transparent;
+    outline: solid 1px var(--color-cinzaescuro);  
+}
+
+.opcao:hover span {
+    border: solid 2px transparent;
+    outline: solid 1px var(--color-coral);  
+}
+
+.opcao input:checked ~ span {
+    background-color: var(--color-coral);
+    border: solid 2px var(--color-bege1);
+    outline: solid 1px var(--color-cinzaescuro);   
+}
+
+.opcao input:checked:hover ~ span {
+    background-color: var(--color-coral);
+    border: solid 2px var(--color-bege1);
+    outline: solid 1px var(--color-coral);   
+}
+
+.botao-enviar {
+    background-color: var(--color-coral);
+    border: none;
+    color: var(--color-branco);
+    padding: var(--padding-obj-s) var(--padding-obj-m);
+    border-radius: var(--padding-obj-l);
+    transition: 0.3s ease;
+    cursor: pointer;
+    font-size: var(--font-size-l);
+}
+
+.botao-enviar:hover {
+    scale: 1.1;
+}
+
+@media screen and (max-width:1024px) {
+    .newsletter {
+        padding: var(--padding-m) 10px;
+        width: 100%;
+    }
+    .newsletter-titulo {
+        padding-bottom: var(--gap-s);
+    }    
+    .newsletter-paragrafo {
+        padding-bottom: var(--gap-s);
+    }
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-s);
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .formulario-label {
+        width: 80%;
+        text-align: center;
+    }
+    .formulario-input {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .newsletter-titulo {
+        font-size: var(--font-size-h4);
+        text-align: center;
+        padding: 0 5%;
+    }
+    .newsletter-paragrafo {
+        text-align: center;
+        width: 90%;
+    }
+    .grupo-opcoes {
+        flex-direction: column;
+    }
+}

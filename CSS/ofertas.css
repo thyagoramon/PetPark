@@ -1,0 +1,148 @@
+
+.ofertas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding-l) 0;
+    background-color: var(--color-bege1);
+    gap: var(--gap-m);
+    width: 100%;
+}
+
+.ofertas-titulo {
+    color: var(--color-coral);
+}
+
+.carrossel-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.carrossel-lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+    /*para o carrossel*/
+    overflow-x: auto; /*Ativa a rolagem horizontal*/
+    scroll-behavior: smooth; /*Deixa a rolagem suave*/
+    scroll-snap-type: x mandatory; /*Ativa o “scroll snap” no eixo horizontal.*/
+    scrollbar-width: none; /*ocultar barra de rolagem*/
+}
+
+.carrossel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 10px;
+    flex: 0 0 25%;
+    box-sizing: border-box;
+    scroll-snap-align: start; /*Define que o item vai “travar” no início do container ao usar o scroll-snap.*/
+}
+
+.carrossel-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-branco);
+    padding: var(--padding-s);
+    border-radius: var(--padding-s);
+    gap: var(--gap-s);
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    height: 100%;
+    min-height: 400px;
+    width: 100%;
+}
+
+.carrossel-card:hover {
+    color: var(--color-coral);
+    .carrossel-imagem {
+        scale: 1.06;
+    }
+}
+
+.carrossel-imagem {
+    transition: 0.3s ease;
+    width: 90%;
+}
+
+.carrossel-nome {
+    font-family: var(--font-body);
+    font-size: var(--font-size-h5);
+    font-weight: 600;
+    text-align: center;
+}
+
+.carrossel-descricao {
+    text-align: center;
+}
+
+.carrossel-preco {
+    font-size: var(--font-size-h5);
+    font-weight: 600;
+}
+
+.carrossel-button {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 1400px;
+    z-index: 0;
+}
+
+.carrossel-nav {
+    background-color: var(--color-coral);
+    border: none;
+    padding: var(--padding-s);
+    border-radius: var(--padding-l);
+    color: var(--color-branco);
+    font-weight: 600;
+    font-size: var(--font-size-l);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.carrossel-nav:hover {
+    scale: 1.2;
+}
+
+@media screen and (max-width:1200px) {
+    .carrossel-item {    
+        flex: 0 0 33%;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .ofertas {
+        padding: var(--padding-m) 0;
+    }
+    .carrossel-item {    
+        flex: 0 0 50%;
+    }
+    .carrossel-container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .ofertas-titulo {
+        font-size: var(--font-size-h4);
+    }
+    .carrossel-item {    
+        flex: 0 0 100%;
+    }
+    .carrossel-nav {
+        display: none;
+    }
+}

@@ -1,0 +1,103 @@
+
+.planos {
+    padding: var(--padding-l) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.planos-background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-coral);
+    padding: var(--padding-m);
+    border-radius: var(--padding-m);
+    gap: var(--padding-m);
+}
+
+.planos-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-branco);
+    text-align: center;
+}
+
+.lista-planos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--padding-m);
+    justify-content: center;
+    align-items: center;
+}
+
+.cartao {
+    background-color: var(--color-branco);
+    padding: var(--padding-s);
+    border-radius: var(--padding-s);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    gap: var(--gap-s);
+    text-align: center;
+    p {
+        text-align: center;
+    }
+    span {
+        font-family: var(--font-headings);
+        font-size: var(--font-size-h3);
+        color: var(--color-coral);
+    }
+}
+
+.botao-compra {
+    background-color: var(--color-coral);
+    border: none;
+    font-size: var(--font-size-l);
+    font-weight: 600;
+    color: var(--color-branco);
+    padding: var(--padding-obj-s) var(--padding-obj-m);
+    border-radius: var(--padding-obj-l);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.botao-compra:hover {
+    scale: 1.1;
+}
+
+@media screen and (max-width:1024px) {
+    .planos {
+        padding: var(--padding-m) 0;
+    }
+    .lista-planos {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .planos-background {
+        padding: var(--padding-s);
+        border-radius: var(--padding-s);
+        gap: var(--padding-s);
+    }
+    .planos-titulo {
+        font-size: var(--font-size-h4);
+    }
+    .lista-planos {
+        gap: var(--padding-s);
+    }
+    .cartao {
+        padding: var(--padding-obj-m) var(--padding-obj-s);
+        border-radius: var(--padding-s);
+        width: 90%;
+        gap: var(--gap-s);
+    }
+}
